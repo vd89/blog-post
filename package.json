@@ -1,0 +1,22 @@
+{
+  "name": "blog-post",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "The blog Post app using ejs",
+  "author": "vd89 <me@daxcodes.in>",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^3.3.1",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.9.20"
+  },
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "serve": "nodemon index.js"
+  }
+}
