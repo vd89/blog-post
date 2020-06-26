@@ -9,5 +9,13 @@ const router = Router();
 router.get('/', (req, res) => {
 	res.render('welcome');
 });
-
+router.get('/about', (req, res) => {
+	res.render('about');
+});
+router.get('/post', (req, res) => {
+	res.render('post');
+});
+router.get('/contact', (req, res) => {
+	res.render('contact');
+});
 export default router;
