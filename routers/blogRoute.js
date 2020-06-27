@@ -2,14 +2,18 @@
 
 import express from 'express';
 import BlogPost from '../models/BlogPost.js';
+import blogController from '../controller/blogController.js';
+
 const { Router } = express;
+const { blog_index, blog_create_get } = blogController;
 
 const router = Router();
 
-router.get('/', (req, res) => {
-	res.json({ Msg: 'This is the blog route' });
-});
+// View all blogs
+router.get('/', blog_index);
 
+//Create a blog
+router.get('/create', blog_create_get);
 router.post('/', async (req, res) => {
 	try {
 		const newBlog = new BlogPost(req.body);

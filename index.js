@@ -20,6 +20,9 @@ app.set('view engine', 'ejs');
 //Router
 app.use('/', indexRoute);
 app.use('/blog', blorRoute);
+app.use((req, res) => {
+	res.status(404).render('404', { msg: 'Page not found 404' });
+});
 
 //Database
 dbController();
