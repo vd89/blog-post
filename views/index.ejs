@@ -24,7 +24,8 @@
 		<div class="col-md-4">
 			<h3><%= blog.title%></h3>
 			<p><%= blog.snippet%></p>
-			<p><%= blog.body%></p>
+			<p class="text-muted"><%= blog._id.getTimestamp()%></p>
+			<p><a href="/blog/<%= blog._id%>" class="btn btn-secondary">View</a></p>
 		</div>
 		<%})%>
 	</div>
@@ -34,4 +35,5 @@
 
 	<%}%>
 </div>
+
 
