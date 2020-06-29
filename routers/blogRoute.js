@@ -28,14 +28,4 @@ router.get('/:id', blog_details);
 // Delete The Blog
 router.post('/:id', blog_delete);
 
-router.post('/', async (req, res) => {
-	try {
-		const newBlog = new BlogPost(req.body);
-		await newBlog.save();
-		res.json({ Msg: 'The Blog is saved in DB' });
-	} catch (error) {
-		res.json({ ErrMsg: { error } });
-	}
-});
-
 export default router;
