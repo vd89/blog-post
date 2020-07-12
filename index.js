@@ -6,6 +6,7 @@ import expressEjsLayouts from 'express-ejs-layouts';
 import indexRoute from './routers/index.js';
 import blorRoute from './routers/blogRoute.js';
 import dbController from './db/dbController.js';
+import config from './config/default.js';
 
 const app = express();
 
@@ -28,7 +29,7 @@ app.use((req, res) => {
 dbController();
 
 // Server
-const port = process.env.PORT || 8085;
+const port = config.port;
 app.listen(port, () => {
 	console.log(`The port is running on ${port}`);
 });

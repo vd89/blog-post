@@ -1,12 +1,12 @@
 /** @format */
 
-import config from 'config';
 import mongoose from 'mongoose';
+import config from '../config/default';
 
 const { connect } = mongoose;
 export default async () => {
 	try {
-		const URI = config.get('mongoURI');
+		const URI = config.mongoURI;
 		const options = {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
