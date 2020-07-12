@@ -8,7 +8,6 @@
 	"dependencies": {
 		"bcrypt": "^5.0.0",
 		"ejs": "^3.1.3",
-		"esm": "^3.2.25",
 		"express": "^4.17.1",
 		"express-ejs-layouts": "^2.5.0",
 		"mongoose": "^5.9.20",
@@ -17,8 +16,9 @@
 	"devDependencies": {
 		"nodemon": "^2.0.4"
 	},
+	"type": "module",
 	"scripts": {
-		"serve": "nodemon -r esm index.js",
-		"start": "pm2 start esm index.js"
+		"serve": "nodemon  index.js",
+		"start": "pm2 start index.js"
 	}
 }

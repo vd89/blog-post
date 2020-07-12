@@ -1,7 +1,7 @@
 /** @format */
 
 import mongoose from 'mongoose';
-import config from '../config/default';
+import config from '../config/default.js';
 
 const { connect } = mongoose;
 export default async () => {
