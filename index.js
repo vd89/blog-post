@@ -3,11 +3,11 @@
 import express from 'express';
 import expressEjsLayouts from 'express-ejs-layouts';
 
-import indexRoute from './routers/index.js';
-import blorRoute from './routers/blogRoute.js';
+import indexRoute from './routers/index';
+import blorRoute from './routers/blogRoute';
 import userRoute from './routers/userRoute';
-import dbController from './db/dbController.js';
-import config from './config/default.js';
+import dbController from './db/dbController';
+import config from './config/default';
 
 const app = express();
 

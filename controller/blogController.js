@@ -1,6 +1,6 @@
 /** @format */
 
-import BlogPost from '../models/BlogPost.js';
+import BlogPost from '../models/BlogPost';
 
 const blog_index = async (req, res) => {
 	try {

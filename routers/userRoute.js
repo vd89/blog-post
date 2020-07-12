@@ -1,11 +1,13 @@
 /** @format */
 
 import express from 'express';
+import userController from '../controller/userController';
 
 const router = express.Router();
 
-//Test route
-router.get('/register', (req, res) => {
-	res.status(200).render('register');
-});
+const { user_register_get, user_register_post } = userController;
+
+// Register routes
+router.get('/register', user_register_get);
+router.post('/register', user_register_post);
 export default router;
