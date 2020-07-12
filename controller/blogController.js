@@ -20,7 +20,9 @@ const blog_create_get = (req, res) => {
 
 const blog_create_post = async (req, res) => {
 	try {
-		const newBlog = new BlogPost(req.body);
+		const blogImage = req.file.filename;
+		const { title, snippet, body } = req.body;
+		const newBlog = new BlogPost({ title, snippet, body, blogImage });
 		await newBlog.save();
 		res.status(200).redirect('/blog');
 	} catch (error) {

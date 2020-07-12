@@ -13,7 +13,6 @@ const storage = multer.diskStorage({
 		);
 	},
 });
-// File type
 
 // Init Upload
 const upload = multer({
