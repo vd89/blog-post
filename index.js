@@ -17,7 +17,7 @@ app.use(express.json());
 // EJS
 app.use(expressEjsLayouts);
 app.set('view engine', 'ejs');
-app.use(express.static(__dirname + './public'));
+app.use(express.static('./public'));
 
 //Router
 app.use('/', indexRoute);

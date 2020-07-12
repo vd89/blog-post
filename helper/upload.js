@@ -5,7 +5,7 @@ import path from 'path';
 
 //Set Storage Engine
 const storage = multer.diskStorage({
-	destination: './public/uploads/',
+	destination: './public/images/',
 	filename: (req, file, cb) => {
 		cb(
 			null,
