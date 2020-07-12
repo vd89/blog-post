@@ -17,6 +17,6 @@
 	},
 	"scripts": {
 		"serve": "nodemon -r esm index.js",
-		"start": "pm2 start index.js"
+		"start": "pm2 start -r esm index.js"
 	}
 }
