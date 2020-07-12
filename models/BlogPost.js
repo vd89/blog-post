@@ -17,6 +17,12 @@ const BlogPostSchema = new Schema({
 		type: String,
 		required: true,
 	},
+	userName: {
+		type: String,
+	},
+	blogImage: {
+		type: String,
+	},
 });
 
 export default model('BlogPost', BlogPostSchema, 'blogsposts');

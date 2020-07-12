@@ -1,8 +1,8 @@
 /** @format */
 
 import express from 'express';
-import BlogPost from '../models/BlogPost.js';
 import blogController from '../controller/blogController.js';
+import upload from '../helper/upload.js';
 
 const { Router } = express;
 const {
@@ -20,7 +20,7 @@ router.get('/', blog_index);
 
 //Create a blog
 router.get('/create', blog_create_get);
-router.post('/create', blog_create_post);
+router.post('/create', upload, blog_create_post);
 
 // View Single Blog
 router.get('/:id', blog_details);

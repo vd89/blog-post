@@ -5,7 +5,7 @@
 			<h1>Blog</h1>
 		</div>
 		<div class="card-body">
-			<form action="/blog/create" method="POST">
+			<form action="/blog/create" method="POST" enctype="multipart/form-data">
 				<fieldset>
 					<div class="form-group">
 						<label for="title">Title</label>
@@ -13,8 +13,8 @@
 							type="text"
 							class="form-control"
 							id="title"
-              placeholder="Please provide title"
-              name="title"
+							placeholder="Please provide title"
+							name="title"
 						/>
 					</div>
 					<div class="form-group">
@@ -22,17 +22,32 @@
 						<input
 							type="text"
 							class="form-control"
-              placeholder="Provide Snippet"
-              name="snippet"
+							placeholder="Provide Snippet"
+							name="snippet"
 						/>
-          </div>
-          <div class="form-group">
-            <label for="body">Body</label>
-            <textarea id="body" cols="10" rows="8" class="form-control"
-            name="body"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Submit</button>
-
+					</div>
+					<div class="form-group">
+						<label for="body">Body</label>
+						<textarea
+							id="body"
+							cols="10"
+							rows="8"
+							class="form-control"
+							name="body"
+						></textarea>
+					</div>
+					<div class="form-group">
+						<label for="image">Image</label>
+						<input
+							type="file"
+							class="form-control"
+							id="image"
+							name="blogImage"
+						/>
+					</div>
+					<button type="submit" class="btn btn-primary btn-block">
+						Submit
+					</button>
 				</fieldset>
 			</form>
 		</div>
